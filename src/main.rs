@@ -20,20 +20,20 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let _ = lock_value(
         "/sys/class/thermal/thermal_zone0/trip_point_0_temp",
-        "6666666",
+        "175",
     );
     let _ = lock_value(
         "/sys/class/thermal/thermal_message/board_sensor_temp",
-        "600000",
+        "175",
     );
     let _ = lock_value(
         "/sys/kernel/thermal/max_ttj",
-        "MAX_TTJ 6666666 6666666 6666666",
+        "MAX_TTJ 175 175 175",
     );
-    lock_value("/sys/kernel/thermal/ttj", "TTJ 6666666 6666666 6666666")?;
+    lock_value("/sys/kernel/thermal/ttj", "TTJ 175 175 175")?;
     let _ = lock_value(
         "/sys/kernel/thermal/min_ttj",
-        "MIN_TTJ 6666666 6666666 6666666",
+        "MIN_TTJ 175 175 175",
     );
     let _ = lock_value("/sys/kernel/ged/hal/custom_upbound_gpu_freq", "0");
 
